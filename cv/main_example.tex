@@ -1,8 +1,8 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Juan David Posso Rengifo
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
+%% Master populated via /setup; tailor and translate to the language of each posting.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -16,7 +16,7 @@
 % frozen before \moderncvcolor runs. Re-let them after. \namefont is the hook
 % every name-style macro routes through, so this also works on moderncv 2.3.1
 % (Debian/Ubuntu apt), which has no \firstnamestyle/\lastnamestyle at all.
-\renewcommand*{\namefont}{\fontsize{34}{36}\bfseries\upshape}
+\renewcommand*{\namefont}{\fontsize{25}{28}\bfseries\upshape}
 \colorlet{firstnamecolor}{color1}
 \colorlet{lastnamecolor}{color1}
 \colorlet{namecolor}{color1}
@@ -40,7 +40,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Juan David Posso Rengifo - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -50,141 +50,68 @@
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
+\name{Juan David}{Posso Rengifo}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\address{Santiago de Cali, Colombia}{}{}
+\phone[mobile]{+57 3145291839}
+\email{juandapore3098@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/juandavidposso/}{LinkedIn}, \href{https://github.com/juanda3098}{GitHub}}
 
+\usepackage{needspace}
 \begin{document}
-
 \makecvtitle
 
-% ============================================================
-%     PROFILE STATEMENT
-% ============================================================
+\section{Perfil}
+Ingeniero Multimedia con experiencia en desarrollo frontend y backend y fortalezas en React, Apex y Aura Components. Participación en un portal de autoservicio en producción y en las etapas iniciales de una migración de Salesforce a un CRM propio. Experiencia liderando un equipo de tres desarrolladores.
 
-\vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\section{Competencias técnicas}
+\cvitem{Frontend}{React, JavaScript, Redux, Lightning Web Components y Aura Components.}
+\cvitem{Backend}{Apex, Node.js, NestJS y MySQL.}
+\cvitem{Salesforce}{Salesforce Development, Visualforce y Salesforce Flow.}
+\cvitem{Prácticas}{Domain-Driven Design, arquitectura hexagonal, revisión de código, Playwright y liderazgo técnico.}
+\cvitem{Herramientas de IA}{Codex para desarrollo, revisión de código y creación de skills.}
 
-% ============================================================
-%     CORE COMPETENCIES
-% ============================================================
-
-\section{Core Competencies}
-\vspace{1pt}
+\section{Experiencia profesional}
+\needspace{5\baselineskip}
+\cventry{enero 2025 - septiembre 2026}{Software Engineer III}{Veevart}{Cali, Colombia; híbrido}{}{
 \begin{itemize}
-
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
-
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
-
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
-
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
-
-\end{itemize}
-
-% ============================================================
-%     PROFESSIONAL EXPERIENCE
-% ============================================================
-
-\section{Professional Experience}
-\vspace{3pt}
+\item Desarrollo de proyectos completos desde el análisis técnico hasta la implementación.
+\item Levantamiento y modelado del dominio con DDD para apoyar el inicio de la transición de Salesforce a una plataforma CRM propia.
+\item Uso de arquitectura hexagonal en el desarrollo de software.
+\item Revisión de código y acompañamiento en la resolución de problemas técnicos.
+\item Uso de Codex para desarrollo, revisiones y creación de skills orientadas a mejorar procesos del equipo.
+\end{itemize}}
+\needspace{5\baselineskip}
+\cventry{junio 2023 - enero 2025}{Lead Engineer}{Veevart}{Cali, Colombia; híbrido}{}{
 \begin{itemize}
+\item Liderazgo de tres desarrolladores, en colaboración con un Product Manager y con apoyo de QA.
+\item Acompañamiento técnico al equipo para resolver problemas durante el desarrollo de aplicaciones.
+\end{itemize}}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\newpage
+\section{Experiencia profesional (continuación)}
+\needspace{5\baselineskip}
+\cventry{enero 2023 - junio 2023}{Software Engineer II}{Veevart}{Cali, Colombia; híbrido}{}{}
+\needspace{5\baselineskip}
+\cventry{octubre 2021 - enero 2023}{Software Engineer I}{Veevart}{Cali, Colombia; híbrido}{}{}
+
+\subsection{Proyecto destacado en Veevart}
+\cvitem{Portal en producción}{Desarrollo frontend y backend de un portal donde los usuarios de los clientes gestionaban membresías, pagos recurrentes y donaciones, incluyendo el cambio de la tarjeta de crédito asociada a membresías o donaciones.}
+
+\needspace{5\baselineskip}
+\cventry{abril 2021 - septiembre 2021}{Desarrollador junior}{Kaleido Lab}{}{Fechas aproximadas}{
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
-\end{itemize}}}
+\item Desarrollo de la estructura de experiencias web interactivas para espacios virtuales de reuniones y tiendas con compras online interactivas.
+\item Uso de JavaScript, React y MySQL.
+\end{itemize}}
 
-\vspace{3pt}
+\section{Educación}
+\needspace{5\baselineskip}
+\cventry{2015 - 2020}{Ingeniero Multimedia}{Universidad Autónoma de Occidente}{}{Graduado}{
+Proyecto de grado: desarrollo de una plataforma para la gestión de pacientes de un centro de fisioterapia.}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
-\begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-\end{itemize}}}
-
-\vspace{3pt}
-
-% --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
-\begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-\end{itemize}}}
-
-\end{itemize}
-
-% ============================================================
-%     EDUCATION
-% ============================================================
-
-\section{Education}
-\vspace{1pt}
-\begin{itemize}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
-}}
-
-\vspace{3pt}
-
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
-}}
-
-\end{itemize}
-
-% ============================================================
-%     LANGUAGES
-% ============================================================
-
-\section{Languages}
-\vspace{1pt}
-\begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
-\end{itemize}
-
-% ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
-% ============================================================
-
-\section{Honors and Awards}
-\vspace{1pt}
-\begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
-\end{itemize}
-
-% ============================================================
-%     REFERENCES
-% ============================================================
-
-\section{References}
-\vspace{1pt}
-\begin{itemize}
-\item{Available upon request.}
-\end{itemize}
-
+\section{Idiomas}
+\cvitem{Español}{Nativo.}
+\cvitem{Inglés}{B1.}
 \end{document}

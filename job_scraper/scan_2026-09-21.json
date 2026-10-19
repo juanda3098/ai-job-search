@@ -1,0 +1,262 @@
+{
+  "date": "2026-09-21",
+  "fallback": [
+    "linkedin-search",
+    "freehire-search"
+  ],
+  "rows": [
+    [
+      "In All Media Inc",
+      "2085/2086 Senior Full-Stack Engineer (JavaScript + Node.js/React)",
+      "https://inallmedia-llc.breezy.hr/p/2d9402e84336-2085-2086-senior-full-stack-engineer-javascript-node-js-react",
+      "medium",
+      "new",
+      "2026-09-11",
+      "Remoto LATAM",
+      "React/Node, componentes UI, Playwright, mapas y herramientas IA afines. Brechas: headless CMS, GraphQL/gRPC, Redis y pruebas A/B. Toda entrevista, documentación y comunicación diaria en inglés; sin nivel CEFR explícito, validar frente a B1. Horario CT/ET. Fecha de FreeHire; descripción verificada en portal del empleador.",
+      "freehire-search"
+    ],
+    [
+      "Pearster",
+      "Full Stack Developer – Node.js / React",
+      "https://co.linkedin.com/jobs/view/full-stack-developer-%E2%80%93-node-js-react-at-pearster-4460250177",
+      "medium",
+      "new",
+      null,
+      "Remoto LATAM",
+      "Node/React y soporte afines; exige experiencia senior en migraciones de versiones Node y MongoDB. Advanced English supera B1. Proyecto de 5 meses, horario EST y pago en USD sin monto. Página indexada dice hace 2 semanas; fecha absoluta sin confirmar.",
+      "linkedin-search"
+    ],
+    [
+      "Truelogic",
+      "Senior Full-stack Engineer (React/Node) (Backend-Focused) - Real Estate - Colombia/Remote",
+      "https://freehire.me/jobs/senior-full-stack-engineer-react-node-backend-focused-real-estate-colombia-remote-truelogic-ipvedsxw",
+      "medium",
+      "new",
+      "2026-09-10",
+      "Remoto Colombia",
+      "React/Node, arquitectura y pagos afines. Brechas en PostgreSQL avanzado, sistemas distribuidos, observabilidad e infraestructura como código. Publicita autonomía y pago USD sin monto. Nivel de inglés y horarios no especificados.",
+      "freehire-search"
+    ],
+    [
+      "Archie Labs",
+      "Senior Fullstack Developer (React.js + Node.js) — Remote",
+      "https://freehire.me/jobs/senior-fullstack-developer-react-js-node-js-remote-archie-labs-tkmj5tad",
+      "high",
+      "expired",
+      "2026-09-03",
+      "Remoto LATAM",
+      "Cierre indicado 2026-09-06.",
+      "freehire-search"
+    ],
+    [
+      "Think Us - It Staff Augmentation",
+      "Full Stack Developer – React + Python + IA (LLMs/RAG)",
+      "https://co.linkedin.com/jobs/view/full-stack-developer-%E2%80%93-react-%2B-python-%2B-ia-llms-rag-at-think-us-it-staff-augmentation-4464678680",
+      "low",
+      "expired",
+      null,
+      "Cali híbrido",
+      "Ya no se aceptan solicitudes.",
+      "linkedin-search"
+    ],
+    [
+      "Lite Thinking company",
+      "Desarrollador Full Stack Python y React",
+      "https://freehire.me/jobs/desarrollador-full-stack-python-y-react-lite-thinking-company-nqmn326a",
+      "low",
+      "expired",
+      "2026-08-10",
+      "Colombia",
+      "Cierre indicado 2026-09-12.",
+      "freehire-search"
+    ],
+    [
+      "FXC Intelligence",
+      "Software Engineer (Golang/TypeScript/React)",
+      "https://freehire.me/jobs/software-engineer-golang-typescript-react-fxc-intelligence-6df6hsiw",
+      "low",
+      "expired",
+      "2026-09-10",
+      "Colombia",
+      "Cierre indicado 2026-09-13.",
+      "freehire-search"
+    ],
+    [
+      "Stefanini LATAM",
+      "Developer Fullstack Web Sr (React & TypeScript) | 100 % REMOTO + USD",
+      "https://co.linkedin.com/jobs/view/developer-fullstack-web-sr-react-typescript-100-%25-remoto-%2B-usd-at-stefanini-latam-4467772808",
+      "high",
+      "expired",
+      null,
+      "Colombia remoto",
+      "Página de detalle indica Ya no se aceptan solicitudes, pese a fragmento reciente.",
+      "linkedin-search"
+    ],
+    [
+      "COHNECTI",
+      "Desarrollador Frontend",
+      "https://co.linkedin.com/jobs/view/desarrollador-frontend-at-cohnecti-4465330367",
+      "high",
+      "expired",
+      null,
+      "Remoto Colombia",
+      "Página indica Ya no se aceptan solicitudes. Salario publicado 5–6 millones COP.",
+      "linkedin-search"
+    ],
+    [
+      "Qubilo",
+      "Frontend Engineer senior",
+      "https://co.linkedin.com/jobs/view/frontend-engineer-senior-at-qubilo-4400641934",
+      "high",
+      "skipped",
+      null,
+      "Remoto Colombia",
+      "Publicado hace 5 meses, fuera ventana de 14 días sin plazo vigente declarado.",
+      "linkedin-search"
+    ],
+    [
+      "Multiplica",
+      "Desarrollador de Salesforce Marketing Cloud",
+      "https://co.linkedin.com/jobs/view/desarrollador-de-salesforce-marketing-cloud-at-multiplica-4459427964",
+      "low",
+      "skipped",
+      null,
+      "Remoto Colombia",
+      "Hace 3 semanas; Marketing Cloud/AMPscript no documentados en perfil.",
+      "linkedin-search"
+    ],
+    [
+      "Stefanini Group",
+      "Salesforce Developer",
+      "https://co.linkedin.com/jobs/view/salesforce-developer-at-stefanini-group-4460080579",
+      "high",
+      "skipped",
+      null,
+      "Colombia",
+      "Apex/triggers/LWC afines; modalidad remota desde Cali y fecha no confirmadas. Requiere experiencia financiera y bancaria.",
+      "linkedin-search"
+    ],
+    [
+      "New Fire Global",
+      "Senior/Lead Full Stack Engineer (Node.js + React)",
+      "https://freehire.me/jobs/senior-lead-full-stack-engineer-node-js-react-new-fire-global-psaxjl3d",
+      "medium",
+      "skipped",
+      "2026-09-10",
+      "Medellín remoto",
+      "Detalle no recuperable; elegibilidad desde Cali y requisitos completos pendientes.",
+      "freehire-search"
+    ],
+    [
+      "Visa Hunt",
+      "Lead React Frontend Developer",
+      "https://freehire.me/jobs/lead-react-frontend-developer-visa-hunt-r55y5zeh",
+      "high",
+      "skipped",
+      "2026-09-17",
+      "Huila Colombia",
+      "Describe Jalasoft pero empleador agregado Visa Hunt; detalle y modalidad pendientes. No seleccionado.",
+      "freehire-search"
+    ],
+    [
+      "INGEPSY",
+      "Senior Full-Stack Engineer: React/Node/C#, AWS Cloud",
+      "https://freehire.me/jobs/senior-full-stack-engineer-react-node-c-aws-cloud-ingepsy-2kj4exzh",
+      "low",
+      "skipped",
+      "2026-09-11",
+      "Risaralda Colombia",
+      "Agregador refiere AgileEngine; C#/AWS fuerte y elegibilidad desde Cali pendientes.",
+      "freehire-search"
+    ],
+    [
+      "Softgic",
+      "Desarrollador(a) Full Stack Semi Senior – Java + React",
+      "https://co.linkedin.com/jobs/view/desarrollador-a-full-stack-semi-senior-%E2%80%93-java-%2B-react-at-softgic-4464134076",
+      "low",
+      "skipped",
+      null,
+      "Medellín",
+      "Java/Spring requerido; remoto desde Cali no verificado.",
+      "linkedin-search"
+    ],
+    [
+      "Stefanini LATAM",
+      "Senior Salesforce Developer",
+      "https://co.linkedin.com/jobs/view/senior-salesforce-developer-at-stefanini-latam-4466590012",
+      "high",
+      "skipped",
+      null,
+      "Colombia",
+      "Detalle no recuperable; no se confirma vigencia ni modalidad.",
+      "linkedin-search"
+    ],
+    [
+      "EPAM Systems",
+      "Senior Salesforce Developer",
+      "https://co.linkedin.com/jobs/view/senior-salesforce-developer-at-epam-systems-4465555579",
+      "high",
+      "skipped",
+      null,
+      "Colombia",
+      "Detalle no recuperable; requisitos y modalidad pendientes.",
+      "linkedin-search"
+    ],
+    [
+      "AgileEngine",
+      "Salesforce Developer ID85155",
+      "https://co.linkedin.com/jobs/view/salesforce-developer-id85155-at-agileengine-4468809193",
+      "high",
+      "skipped",
+      null,
+      "Pereira",
+      "Detalle no recuperable; remoto desde Cali pendiente.",
+      "linkedin-search"
+    ],
+    [
+      "Quorax",
+      "Desarrollador de Salesforce (Einstein Bot)",
+      "https://co.linkedin.com/jobs/view/desarrollador-de-salesforce-einstein-bot-at-quorax-4349630895",
+      "medium",
+      "skipped",
+      null,
+      "Remoto Colombia",
+      "Solo fragmento; fecha y vigencia no comprobadas.",
+      "linkedin-search"
+    ],
+    [
+      "Open English",
+      "Salesforce Developer- Agentforce (AI Support Agents)",
+      "https://co.linkedin.com/jobs/view/salesforce-developer-agentforce-ai-support-agents-at-open-english-4469941464",
+      "medium",
+      "skipped",
+      null,
+      "Bogotá",
+      "Solo fragmento; modalidad y requisitos Agentforce pendientes.",
+      "linkedin-search"
+    ],
+    [
+      "Recruitment BPO COL",
+      "Salesforce Developer -AgentForce",
+      "https://co.linkedin.com/jobs/view/salesforce-developer-agentforce-at-recruitment-bpo-col-4468646967",
+      "medium",
+      "skipped",
+      null,
+      "Colombia",
+      "Solo fragmento; fecha, modalidad y Agentforce pendientes.",
+      "linkedin-search"
+    ],
+    [
+      "CPIM COLOMBIA HR",
+      "Salesforce Developer / Salesforce Admin",
+      "https://co.linkedin.com/jobs/view/salesforce-developer-salesforce-admin-at-cpim-colombia-hr-4331341357",
+      "medium",
+      "skipped",
+      null,
+      "Bogotá",
+      "Solo fragmento; ubicación compatible y vigencia no verificadas.",
+      "linkedin-search"
+    ]
+  ]
+}

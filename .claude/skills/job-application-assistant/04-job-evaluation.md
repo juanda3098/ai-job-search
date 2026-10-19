@@ -60,9 +60,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** React, Apex, Aura Components
+**Moderate match areas:** JavaScript, Lightning Web Components, NestJS, Redux, Node.js, MySQL, Visualforce, Salesforce Flow, Playwright, DDD, arquitectura hexagonal y revisión de código
+**Weak match areas:** Tecnologías no declaradas: evidencia no disponible, no asumir incapacidad ni experiencia
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +74,9 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Frontend y backend, Salesforce, desarrollo de software en el equipo de Fundraising y Membership durante casi cinco años en Veevart, portal de membresías y donaciones en producción y creación de CRM propio con inicio de migración desde Salesforce como Software Engineer III, soporte de plataforma y resolución de bugs durante casi cinco años, liderazgo técnico
+**Moderate:** Consultoría técnica de implementación; experiencia transferible, sin afirmar un cargo previo de consultor
+**Entry-level:** Otros dominios no documentados; evaluar requisitos concretos
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -91,9 +91,9 @@ Does the role and company culture match the behavioral profile?
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
 ### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+- Presencial o híbrido en Cali: PASS
+- Remoto desde Colombia: PASS si admite contratación desde Colombia y respeta horarios; oficina ocasional fuera de Cali: FLAG, requiere aclaración
+- Reubicación o presencial/híbrido fuera de Cali: fuera del alcance solicitado; no proponer sin ampliar preferencias
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -107,19 +107,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Desarrollo frontend con React
+- Desarrollo Salesforce con Apex y Aura
+- Desarrollo full stack; interés en empresas grandes como Mercado Libre y consultoras, preferentemente en español
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: Interés declarado en frontend React, Salesforce y full stack; no se describieron motivaciones adicionales
+- Tasks that drain: Micromanagement (preferencia cultural declarada)
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Buscando empleo; aspiración mensual 10.000.000 COP o 3.500 USD, no mínimo confirmado. Bruto/neto no especificado
+- **Flexibility**: Sin turnos nocturnos ni fines de semana
+- **Professional development**: Cursos gratuitos; beneficios deseados de medicina prepagada y gimnasios
 
 ### 6. Salary Benchmark (Optional)
 
@@ -267,3 +267,6 @@ Before writing the application, consider whether the candidate should call the c
 - The call's purpose is **gathering information**, not delivering a pitch
 - Take notes - use what you learn to tailor the application
 - Reference the conversation naturally in the cover letter ("After speaking with [name], I was especially drawn to...")
+
+## Candidate-specific constraints
+Noches y fines de semana: excluir si son obligatorios. Priorizar trabajo en español. Aplicar Language Gate con español nativo e inglés B1. Salario y beneficios son preferencias; no rechazar automáticamente por aspiración salarial o beneficios no listados. No inferir autorización de trabajo extranjera. Buen ambiente, confianza y autonomía son señales positivas; investigar micromanagement sin atribuirlo sin evidencia.

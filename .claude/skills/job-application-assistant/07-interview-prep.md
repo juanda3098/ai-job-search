@@ -12,32 +12,44 @@ Structure answers as: **Situation** (context), **Task** (your responsibility), *
 
 Keep answers to 1-2 minutes. Be specific. End with what you learned or would do differently.
 
-## Ready-Made STAR Examples
+## STAR Examples grounded in the setup interview
+Borradores basados únicamente en hechos declarados. No inventar métricas. Los resultados pendientes deben completarse antes de presentar estas historias como ejemplos de impacto.
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+### 1. Portal de autoservicio en producción (full stack)
+**S:** Los usuarios de clientes de Veevart necesitaban gestionar membresías, pagos recurrentes y donaciones mediante un portal.
+**T:** Desarrollar tanto frontend como backend, en el cargo de Software Engineer III.
+**A:** Trabajé en ambas capas del portal, incluyendo gestión de membresías, donaciones y cambio de tarjeta asociada.
+**R:** El portal llegó a producción. No se proporcionaron cifras de uso ni impacto económico.
+**Use for:** Entrega de productos, desarrollo full stack, responsabilidad técnica.
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. Creación de CRM propio e inicio de migración desde Salesforce (DDD)
+**S:** Veevart estaba creando una plataforma CRM propia e iniciando la transición desde Salesforce.
+**T:** Participar en la creación del CRM propio y en el inicio de la migración desde Salesforce como Software Engineer III.
+**A:** Participé en la creación de la plataforma, realizando análisis técnico, levantamiento y modelado del dominio mediante Domain-Driven Design.
+**R:** Participación en la creación del CRM y en el inicio de la migración confirmada; no se declaró finalización de la plataforma o de la migración ni un resultado medido. Completar con entregables concretos.
+**Use for:** Análisis técnico, modelado del dominio, modernización de plataformas.
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 3. Liderazgo de un equipo pequeño de desarrolladores (colaboración)
+**S:** Entre junio de 2023 y enero de 2025 fui Technical Lead en Veevart.
+**T:** Liderar un equipo pequeño de desarrolladores, con un Product Manager y apoyo de QA.
+**A:** Acompañé técnicamente al equipo para resolver problemas durante el desarrollo.
+**R:** No se ha descrito un caso concreto con resultado; completar con un problema resuelto antes de usar como historia de impacto.
+**Use for:** Liderazgo técnico, colaboración y acompañamiento.
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 4. Experiencias web interactivas (desarrollo junior)
+**S:** En Kaleido Lab trabajé en experiencias web de espacios virtuales.
+**T:** Desarrollar la estructura de experiencias para reuniones y tiendas interactivas.
+**A:** Trabajé con JavaScript, React y MySQL.
+**R:** Desarrollé la estructura descrita. Despliegue, usuarios y resultados comerciales no confirmados.
+**Use for:** Primeras experiencias, desarrollo web, aprendizaje técnico.
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+## Candidate-specific interview questions
+- ¿Cómo se delegan responsabilidades y se da autonomía al equipo?
+- ¿Existen turnos nocturnos, guardias o trabajo obligatorio en fines de semana?
+- ¿El trabajo remoto puede realizarse desde Colombia?
+- ¿Cuál es el idioma habitual del equipo y qué nivel de inglés requiere?
+- ¿Hay medicina prepagada, formación o convenios con gimnasios?
+- ¿El salario se expresa en bruto o neto y qué tipo de contrato ofrecen?
 
 ## Common Tough Questions
 

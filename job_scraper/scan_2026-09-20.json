@@ -1,0 +1,258 @@
+{
+  "date": "2026-09-20",
+  "fallback": [
+    "linkedin-search",
+    "freehire-search"
+  ],
+  "reason": "Bun no disponible en PATH",
+  "disabled": [
+    "jobbank-search",
+    "jobdanmark-search",
+    "jobindex-search",
+    "jobnet-search"
+  ],
+  "rows": [
+    [
+      "TechMagic",
+      "Middle Salesforce developer (remote in Colombia)",
+      "https://co.linkedin.com/jobs/view/middle-salesforce-developer-remote-in-colombia-at-techmagic-4463582189",
+      "high",
+      "new",
+      "Remoto Colombia",
+      "Hace 1 semana",
+      "Apex, LWC, Flows e integraciones encajan. Inglés Upper-Intermediate/Advanced supera B1. Verificar Platform Events, Jest para LWC y Claude; experiencia confirmada con Codex. Cursos y cobertura de certificaciones.",
+      null
+    ],
+    [
+      "Periferia IT Group",
+      "Desarrollador/a Backend Node.js / NestJS / Golang",
+      "https://co.linkedin.com/jobs/view/desarrollador-a-backend-node-js-nestjs-golang-at-periferia-it-group-4462340952",
+      "medium",
+      "new",
+      "Remoto Colombia",
+      "Hace 2 semanas",
+      "Node/NestJS y APIs afines. Verificar Golang y Apigee. Contrato indefinido, salario a convenir; idioma laboral no especificado.",
+      null
+    ],
+    [
+      "Perficient",
+      "LatAm - Senior NestJS Developer",
+      "https://co.linkedin.com/jobs/view/latam-senior-nestjs-developer-at-perficient-4339247706",
+      "medium",
+      "new",
+      "Remoto LATAM / Colombia",
+      "Hace 2 semanas",
+      "Exige 5+ años Node/TypeScript y 3+ NestJS: antigüedad específica sin confirmar. Cloud, GraphQL/RxJS y contenedores por validar. Formulario menciona autorización en EE. UU. pese a ubicación LATAM; aclarar elegibilidad. Inglés no especificado.",
+      null
+    ],
+    [
+      "Grupo DEACERO",
+      "Full Stack Engineer (TypeScript/React · Python) — Agentic Apps · Remoto Colombia",
+      "https://www.linkedin.com/jobs/view/full-stack-engineer-typescript-react-%C2%B7-python-%E2%80%94-agentic-apps-%C2%B7-remoto-colombia-at-grupo-deacero-4465496262",
+      "low",
+      "new",
+      "Remoto Colombia",
+      "1–2 días en copias indexadas",
+      "React/Node afines, español avanzado e inglés técnico. Requiere integrar LLM y RAG en producción, experiencia no documentada; usar Codex no equivale. Cloud/Docker por confirmar.",
+      null
+    ],
+    [
+      "IAS SOFTWARE SAS",
+      "Desarrollador Fullstack java/Angular",
+      "https://www.masempleo.co/detalle/6201",
+      "low",
+      "new",
+      "Cali / modalidad virtual",
+      "2026-09-01",
+      "No bilingüe. Brecha principal Java, Spring y Angular; comparte DDD y Playwright. Publicación anterior a 14 días admitida por cierre futuro.",
+      "2026-12-31"
+    ],
+    [
+      "Visa Hunt",
+      "Full-Stack Developer | Remote LATAM Only",
+      "https://freehire.me/jobs/full-stack-developer-remote-latam-only-visa-hunt-3lbx7api",
+      "low",
+      "skipped",
+      "Colombia",
+      "2026-09-08",
+      "Backend .NET/C#/Python y C1. Detalle no recuperable; vigencia sin verificar.",
+      null
+    ],
+    [
+      "Bluelight",
+      "React Engineer - Remote, Latin America",
+      "https://co.linkedin.com/jobs/view/react-engineer-remote-latin-america-at-bluelight-4467000524",
+      "medium",
+      "skipped",
+      "Cali / remoto LATAM",
+      null,
+      "Resultado de búsqueda; detalle no recuperable. Fecha, requisitos y vigencia pendientes; no presentar como validada.",
+      null
+    ],
+    [
+      "Kubikware",
+      "Salesforce Engineer (Remote, LATAM)",
+      "https://co.linkedin.com/jobs/view/salesforce-engineer-remote-latam-at-kubikware-a-5-time-inc-5000-company-4466885747",
+      "high",
+      "skipped",
+      "Colombia / remoto LATAM",
+      null,
+      "Apex/LWC en fragmento. Detalle no recuperable; fecha, inglés y vigencia pendientes.",
+      null
+    ],
+    [
+      "Ocubio",
+      "Senior Salesforce Developer",
+      "https://www.linkedin.com/jobs/view/senior-salesforce-developer-at-ocubio-4441606562",
+      "high",
+      "expired",
+      "Colombia",
+      null,
+      "Fuente indica No longer accepting applications.",
+      null
+    ],
+    [
+      "Hunt-INN",
+      "Sr. Backend Engineer (JavaScript/Node) (Argentina/Colombia))",
+      "https://ar.linkedin.com/jobs/view/sr-backend-engineer-javascript-node-argentina-colombia-at-hunt-inn-4301117023",
+      "medium",
+      "expired",
+      "Remoto LATAM",
+      null,
+      "Fuente indica Ya no se aceptan solicitudes.",
+      null
+    ],
+    [
+      "Lean Solutions Group",
+      "Senior Full-Stack Engineer — Remote (React/Node/NestJS)",
+      "https://freehire.me/jobs/senior-full-stack-engineer-remote-react-node-nestjs-lean-solutions-group-bofp3ber",
+      "high",
+      "skipped",
+      "Medellín / remoto",
+      "2026-08-14",
+      "Fuera ventana, sin plazo futuro. C1.",
+      null
+    ],
+    [
+      "AgileEngine",
+      "Senior Full-Stack Engineer — Cloud-Native & AI-Driven",
+      "https://freehire.me/jobs/senior-full-stack-engineer-cloud-native-ai-driven-agileengine-fh7ur52d",
+      "medium",
+      "skipped",
+      "Caldas Colombia",
+      "2026-08-10",
+      "Fuera ventana; actualización 2026-09-01 no es publicación nueva.",
+      null
+    ],
+    [
+      "FPT Latin America",
+      "Senior Full Stack Engineer – Java / Quarkus / React",
+      "https://www.linkedin.com/jobs/view/4452693485/",
+      "low",
+      "skipped",
+      "Remoto Colombia",
+      "Hace 4 semanas",
+      "Fuera ventana, Java central.",
+      null
+    ],
+    [
+      "Interfell",
+      "Desarrollador de back-end (NodeJS)",
+      "https://www.linkedin.com/jobs/view/desarrollador-de-back-end-nodejs-at-interfell-4136236691",
+      "medium",
+      "skipped",
+      "Remoto",
+      null,
+      "Copia rastreada hace 5 meses; vigencia no verificada.",
+      null
+    ],
+    [
+      "SunDevs",
+      "Junior NestJS Developer",
+      "https://co.linkedin.com/jobs/view/junior-nestjs-developer-at-sundevs-4244062623",
+      "low",
+      "skipped",
+      "Remoto LATAM",
+      null,
+      "Copia indexada hace más de un año; no inferir actualidad por texto relativo.",
+      null
+    ],
+    [
+      "Nuawi",
+      "Desarrollador Senior Fullstack Node & Devops",
+      "https://co.linkedin.com/jobs/view/desarrollador-senior-fullstack-node-devops-at-nuawi-4389782626",
+      "medium",
+      "skipped",
+      "Remoto Colombia",
+      null,
+      "Copia rastreada hace 5 meses, proyecto 1 mes; vigencia no verificada.",
+      null
+    ],
+    [
+      "Salesforce",
+      "Sr Analyst, Field Marketing, LATAM",
+      "https://www.linkedin.com/jobs/view/4431760531/",
+      "low",
+      "skipped",
+      "Bogotá",
+      null,
+      "Función marketing fuera de prioridades.",
+      null
+    ],
+    [
+      "Doble Group, Inc",
+      "Sales Director (Salesforce Expert)",
+      "https://www.linkedin.com/jobs/view/4462060517/",
+      "low",
+      "skipped",
+      "Bogotá",
+      null,
+      "Ventas fuera de prioridades.",
+      null
+    ],
+    [
+      "Amrize",
+      "Salesforce Senior Analyst",
+      "https://www.linkedin.com/jobs/view/4455581510/",
+      "medium",
+      "skipped",
+      "Medellín",
+      null,
+      "Remoto desde Cali no confirmado; copia antigua.",
+      null
+    ],
+    [
+      "Salesforce: The #1 AI CRM",
+      "Principal Technical Architect",
+      "https://freehire.me/jobs/principal-technical-architect-salesforce-the-1-ai-crm-7xsvw4fd",
+      "low",
+      "skipped",
+      "Colombia",
+      null,
+      "Título fuera prioridades; publicación mes anterior.",
+      null
+    ],
+    [
+      "Ecolois",
+      "Salesforce Developer & RevOps - Salesforce | Pardot | Apex (Programming language)_ REMOTE LATAM",
+      "https://br.linkedin.com/jobs/view/salesforce-developer-revops-salesforce-pardot-apex-programming-language-remote-latam%0A-at-ecolois-4443232337",
+      "medium",
+      "skipped",
+      "Remoto LATAM",
+      null,
+      "Sin fecha/vigencia verificada; requisitos completos pendientes.",
+      null
+    ],
+    [
+      "Redbee",
+      "Salesforce Developer Semi-Senior",
+      "https://www.jobera.com/job/redbee-salesforce-developer-semi-senior-92a6a072/",
+      "high",
+      "skipped",
+      "Bogotá remoto",
+      null,
+      "Referencia secundaria sin verificación en empleador.",
+      null
+    ]
+  ]
+}

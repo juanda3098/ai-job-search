@@ -1,90 +1,96 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+Configuración de /setup: Juan David Posso Rengifo, 2026-09-18.
 
-## Installed portal CLIs (primary for `/scrape`)
-
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
-
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
-
-**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+## Installed portal CLIs (primary for /scrape)
+Descubrir skills habilitadas bajo .agents/skills/. LinkedIn y FreeHire están habilitados. Jobindex, Jobbank, Jobdanmark y Jobnet permanecen deshabilitados, por no corresponder al mercado solicitado.
+Los comandos, parámetros y filtros se consultan en el SKILL.md de cada portal al ejecutar /scrape. No se ejecutó una búsqueda durante setup.
 
 ## Search Sites
-
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
-
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+- LinkedIn y FreeHire mediante sus CLI.
+- Get on Board (`getonbrd.com`): API pública y búsquedas para empleo tech remoto en LATAM y Colombia.
+- We Work Remotely (`weworkremotely.com`): Feeds RSS y búsquedas remotas globales compatibles con LATAM.
+- Himalayas (`himalayas.app`): API pública de empleos remotos globales con salarios y restricciones por país/zona horaria.
+- Remote100k (`remote100k.com`): Portal de empleos remotos de alta compensación ($100k+ USD) para ingeniería de software.
+- Torre.ai (`torre.ai`): Portal de empleo y talento remoto líder en Colombia y LATAM con subtorres de ingeniería y salarios en USD/COP.
+- Búsqueda web como respaldo cuando falle un CLI y para páginas oficiales de empresas.
+- Mercado Libre es una empresa de interés declarada. Descubrir su página oficial de empleos al buscar; no asumir que tiene vacantes compatibles.
+- Consultoras y empresas grandes, sin lista adicional obligatoria.
 
 ## Query Categories
+Buscar por función; combinar títulos en español e inglés con Cali, Colombia o remoto desde Colombia. Preferir trabajo en español. Los títulos ingleses no implican un requisito de inglés fluido. Ejecutar variantes por separado cuando un portal no soporte OR.
+Prioridades iniciales basadas en el orden mencionado por el candidato, ajustables.
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+### Priority 1: Desarrollo de interfaces con React
+Títulos: Desarrollador Frontend, Desarrollador React, Frontend Developer, React Developer.
+Consultas de respaldo:
+- site:linkedin.com/jobs "React" "Cali"
+- site:linkedin.com/jobs "desarrollador frontend" "Colombia"
+- site:linkedin.com/jobs "React Developer" "remote" "Colombia"
+- site:getonbrd.com/jobs "React" "remote"
+- site:weworkremotely.com "React"
+- site:himalayas.app "React"
+- site:remote100k.com "React"
+- site:torre.ai/post "React"
 
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
+### Priority 2: Desarrollo Salesforce
+Títulos: Desarrollador Salesforce, Salesforce Developer.
+Términos distintivos: Apex, Aura Components, Lightning Web Components.
+Consultas de respaldo:
+- site:linkedin.com/jobs "desarrollador Salesforce" "Colombia"
+- site:linkedin.com/jobs "Salesforce Developer" "remote" "Latin America"
+- site:linkedin.com/jobs "Apex" "Aura" "Colombia"
+- site:getonbrd.com/jobs "Salesforce"
+- site:weworkremotely.com "Salesforce"
+- site:himalayas.app "Salesforce"
+- site:torre.ai/post "Salesforce"
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
+### Priority 3: Desarrollo full stack
+Títulos: Desarrollador Full Stack, Full Stack Developer.
+Términos: React, Node.js, NestJS, MySQL.
+Consultas de respaldo:
+- site:linkedin.com/jobs "desarrollador full stack" "Colombia"
+- site:linkedin.com/jobs "Full Stack Developer" "React" "Colombia"
+- site:getonbrd.com/jobs "Full Stack" "remote"
+- site:weworkremotely.com "Full Stack"
+- site:himalayas.app "Full Stack"
+- site:remote100k.com "Full Stack"
+- site:torre.ai/post "Full Stack"
 
-These match your strongest and most desired career direction.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
-```
-
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
-
-```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
-```
-
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
-
-```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
-```
-
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
-
-```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
-```
+### Priority 4: Ingeniería de software y consultoría técnica
+Títulos amplios: Ingeniero de Software, Software Engineer.
+Roles adyacentes sugeridos para revisión, no preferencias confirmadas: Consultor Técnico Salesforce / Salesforce Technical Consultant. Su experiencia con Salesforce, DDD y acompañamiento técnico es transferible; verificar tareas y requisitos. No buscar liderazgo como prioridad sin solicitud del candidato.
+Consultas de respaldo:
+- site:linkedin.com/jobs "ingeniero de software" "React" "Colombia"
+- site:linkedin.com/jobs "Software Engineer" "Salesforce" "Colombia"
+- site:getonbrd.com/jobs "Software Engineer" "remote"
+- site:weworkremotely.com "Software Engineer"
+- site:himalayas.app "Software Engineer"
+- site:remote100k.com "Software Engineer"
+- site:torre.ai/post "Software Engineer"
+- "Mercado Libre" "empleos" "frontend" "Colombia"
+- "Mercado Libre" "careers" "software engineer" "Colombia"
+- "consultora" "desarrollador Salesforce" "remoto" "Colombia"
 
 ## Location Filter
-
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+- Ideal: Cali presencial/híbrido, o remoto desde Colombia.
+- Aceptable: empresas internacionales que contraten personas residentes en Colombia.
+- Requiere aclaración: desplazamientos fuera de Cali, oficinas ocasionales en otra ciudad, límites de país o huso horario ambiguos.
+- Fuera del alcance: reubicación obligatoria, presencial/híbrido fuera de Cali, remoto restringido a residentes de otros países.
+No inferir ciudadanía ni permisos de trabajo a partir de la ubicación.
 
 ## Language Filter
+Español nativo, inglés B1. Priorizar equipos y trabajo en español. Aplicar el Language Gate de 04-job-evaluation.md: idioma exigido no declarado, FAIL; requisito superior a B1 en inglés, FLAG y continuar con advertencia visible, no exclusión automática. La lengua del anuncio no prueba la del trabajo.
+CV y carta en el idioma de cada vacante por decisión explícita del candidato.
 
-Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
+## Schedule, Compensation and Culture
+- Excluir turnos nocturnos o trabajo obligatorio los fines de semana.
+- Aspiración mensual: 10.000.000 COP o 3.500 USD según contratación; no tratar como equivalentes cambiarios ni mínimos confirmados. Bruto/neto y contrato no especificados.
+- Beneficios deseados, no excluyentes: medicina prepagada, cursos y gimnasios.
+- Priorizar confianza, autonomía y buen ambiente. Investigar señales de micromanagement.
 
 ## Date Filter
-
-Only include jobs posted within the last 14 days, or with an application deadline that has not yet passed. If a posting date cannot be determined, include it but flag as "date unknown".
+Vacantes de los últimos 14 días o con plazo vigente. Si no se conoce fecha, marcar como fecha desconocida; comprobar vigencia en la fuente.
 
 ## Adapting Queries
-
-If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+Ante un enfoque específico de /scrape, seleccionar la categoría y añadir 2-3 variantes; preservar ubicación, horarios y Language Gate.

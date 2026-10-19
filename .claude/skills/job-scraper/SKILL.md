@@ -210,6 +210,16 @@ specific person was found; these are search links, not results.
 
 Scraper-based portal CLIs rot silently: when a portal changes its markup, the parser usually exits 0 with zero results or with null/garbled fields, and the Step 1c fallback never fires because it only triggers on hard failure. This step catches that from evidence the run already holds.
 
+### Step 4.8: Update Static Markdown Dashboard (`job_scraper/latest_results.md`)
+
+Always generate/update the static markdown file `job_scraper/latest_results.md` by calling `node tools/generate_scrape_md.mjs` (or via `tools/fetch_portals.mjs`).
+This file maintains a consolidated, single-file dashboard containing:
+- Complete table of positions (fit badge, application status `new`/`applied`, role, company, location, salary, portal, date, and link).
+- High-fit highlights with key criteria and 1-click LinkedIn referral links (recruiters and team peers).
+- Medium-fit position listing.
+
+This guarantees the user always has a single static file to reference across chat sessions without losing track of vacancies.
+
 **Free pass (no extra requests).** For each enabled portal that ran in Step 1b:
 
 - **Degraded scan:** inspect the results it returned this run. Flags: `company` null or empty on every result, empty titles, undecoded entities (`&amp;`) or HTML fragments in titles, URLs that do not point at the portal. Any of these means the parser is half-working and `/scrape` is silently collecting junk.
@@ -268,7 +278,7 @@ LinkedIn search links:
 - Role/team-peer search link, for the warm-intro / informational-outreach path
 ```
 
-After presenting, ask:
+After presenting, remind the user that the persistent markdown dashboard has been updated at `job_scraper/latest_results.md`, and ask:
 > "Want me to evaluate any of these in detail? Just give me the number(s)."
 
 If the user picks a number, invoke the **job-application-assistant** skill workflow (fit evaluation first, then CV + cover letter if approved).

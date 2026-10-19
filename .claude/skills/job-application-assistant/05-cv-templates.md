@@ -35,7 +35,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 % frozen before \moderncvcolor runs. Re-let them after. \namefont is the hook
 % every name-style macro routes through, so this also works on moderncv 2.3.1
 % (Debian/Ubuntu apt), which has no \firstnamestyle/\lastnamestyle at all.
-\renewcommand*{\namefont}{\fontsize{34}{36}\bfseries\upshape}
+\renewcommand*{\namefont}{\fontsize{25}{28}\bfseries\upshape}
 \colorlet{firstnamecolor}{color1}
 \colorlet{lastnamecolor}{color1}
 \colorlet{namecolor}{color1}
@@ -59,7 +59,7 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Juan David Posso Rengifo - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -69,13 +69,13 @@ Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. A
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Juan David}{Posso Rengifo}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Santiago de Cali, Colombia}{}{}
+\phone[mobile]{+57 3145291839}
+\email{juandapore3098@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/juandavidposso/}{LinkedIn}, \href{https://github.com/juanda3098}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -137,11 +137,11 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Frontend React roles:**
+> Ingeniero Multimedia con experiencia en React y desarrollo de aplicaciones web. Participé en frontend y backend de un portal de membresías, pagos recurrentes y donaciones que llegó a producción, y lideré un equipo pequeño de desarrolladores en Veevart.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Salesforce roles:**
+> Ingeniero Multimedia con experiencia en desarrollo Salesforce y fortalezas en Apex y Aura Components. He realizado revisión de código, acompañamiento técnico y modelado del dominio con DDD para la creación de un CRM propio y las etapas iniciales de la migración desde Salesforce, como Software Engineer III.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -377,3 +377,9 @@ The section order varies by role type:
 4. Professional Experience (reverse chronological)
 5. Publications & Awards
 6. References
+
+## Full stack profile statement
+Ingeniero Multimedia con experiencia en frontend y backend, React, Node.js, NestJS y MySQL. Desarrollé ambas capas de un portal de autoservicio en producción para gestionar membresías, pagos recurrentes y donaciones.
+
+## Candidate language and evidence rules
+CV en el idioma de cada vacante, por elección explícita del candidato. La plantilla maestra está en español. Traducir también encabezados; conservar inglés B1 como nivel real. Usar Codex cuando se mencione IA; no afirmar experiencia en Claude Code. El portal de autoservicio y la creación del CRM propio con migración desde Salesforce corresponden a Software Engineer III (enero 2025 - septiembre 2026). No afirmar que la creación del CRM ni la migración se completaron sin confirmación. Kaleido Lab: febrero-septiembre de 2021. Omitir certificaciones y referencias sin detalle.
