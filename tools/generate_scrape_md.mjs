@@ -350,8 +350,14 @@ export function generateScrapeMarkdown(options = {}) {
     if (urlLower.includes('whatjobs.com') || urlLower.includes('adzuna.com')) continue;
 
     const desc = `${job.title} ${job.notes || ''} ${job.descriptionSnippet || ''} ${job.description || ''}`;
-    const lang = evaluateLanguage(desc, job.company);
-    const evaluatedFit = evaluateFit(job.title, desc, job.location, job.company);
+    let lang = evaluateLanguage(desc, job.company);
+    if (job.language_gate === 'FLAG') {
+      lang = { gate: 'FLAG', note: job.language_note || 'Requiere inglés avanzado / profesional / C1 / fluido / excelente' };
+    }
+    let evaluatedFit = evaluateFit(job.title, desc, job.location, job.company);
+    if (lang.gate === 'FLAG') {
+      evaluatedFit = 'low';
+    }
     filteredJobs.push({
       ...job,
       fit: evaluatedFit,
