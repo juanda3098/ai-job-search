@@ -720,49 +720,52 @@ async function fetchLinkedIn(query, days, limit, state) {
   const effectiveDays = Math.max(days || 30, 30);
   const cutoff = Date.now() - (effectiveDays * 24 * 60 * 60 * 1000);
 
-  const searchUrl = `https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=${encodeURIComponent(query)}&location=Colombia&start=0`;
-  
-  try {
-    const res = await fetch(searchUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8'
+  const offsets = [0, 25];
+  for (const offset of offsets) {
+    if (results.length >= limit) break;
+    const searchUrl = `https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=${encodeURIComponent(query)}&location=Colombia&start=${offset}`;
+    
+    try {
+      const res = await fetch(searchUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+          'Accept-Language': 'es-ES,es;q=0.9,en;q=0.8'
+        }
+      });
+      if (!res.ok) {
+        if (res.status !== 429) console.error(`[linkedin] Search status ${res.status} for "${query}" (start=${offset})`);
+        continue;
       }
-    });
-    if (!res.ok) {
-      console.error(`[linkedin] Search error status ${res.status} for "${query}"`);
-      return results;
-    }
-    const html = await res.text();
-    const chunks = html.split(/data-entity-urn="urn:li:jobPosting:/).slice(1);
+      const html = await res.text();
+      const chunks = html.split(/data-entity-urn="urn:li:jobPosting:/).slice(1);
 
-    for (const chunk of chunks) {
-      if (results.length >= limit) break;
+      for (const chunk of chunks) {
+        if (results.length >= limit) break;
 
-      const idMatch = chunk.match(/^(\d+)/);
-      if (!idMatch) continue;
-      const id = idMatch[1];
+        const idMatch = chunk.match(/^(\d+)/);
+        if (!idMatch) continue;
+        const id = idMatch[1];
 
-      const titleMatch = chunk.match(/class="base-search-card__title"[^>]*>([\s\S]*?)<\/h3>/i);
-      const compMatch = chunk.match(/class="base-search-card__subtitle"[^>]*>([\s\S]*?)<\/h4>/i);
-      const locMatch = chunk.match(/class="job-search-card__location"[^>]*>([\s\S]*?)<\/span>/i);
-      const dtMatch = chunk.match(/datetime="([^"]+)"/i);
-      const linkMatch = chunk.match(/class="base-card__full-link[^"]*"[^>]*href="([^"]+)"/i);
+        const titleMatch = chunk.match(/class="base-search-card__title"[^>]*>([\s\S]*?)<\/h3>/i);
+        const compMatch = chunk.match(/class="base-search-card__subtitle"[^>]*>([\s\S]*?)<\/h4>/i);
+        const locMatch = chunk.match(/class="job-search-card__location"[^>]*>([\s\S]*?)<\/span>/i);
+        const dtMatch = chunk.match(/datetime="([^"]+)"/i);
+        const linkMatch = chunk.match(/class="base-card__full-link[^"]*"[^>]*href="([^"]+)"/i);
 
-      const title = titleMatch ? decodeHTML(titleMatch[1]) : 'Untitled';
-      const company = compMatch ? decodeHTML(compMatch[1]) : 'LinkedIn Employer';
-      const location = locMatch ? decodeHTML(locMatch[1]) : 'Colombia';
-      const dateStr = dtMatch ? dtMatch[1] : new Date().toISOString().slice(0, 10);
-      const url = linkMatch ? linkMatch[1].split('?')[0] : `https://www.linkedin.com/jobs/view/${id}`;
+        const title = titleMatch ? decodeHTML(titleMatch[1]) : 'Untitled';
+        const company = compMatch ? decodeHTML(compMatch[1]) : 'LinkedIn Employer';
+        const location = locMatch ? decodeHTML(locMatch[1]) : 'Colombia';
+        const dateStr = dtMatch ? dtMatch[1] : new Date().toISOString().slice(0, 10);
+        const url = linkMatch ? linkMatch[1].split('?')[0] : `https://www.linkedin.com/jobs/view/${id}`;
 
-      // Date cutoff
-      const pubDateMs = Date.parse(dateStr);
-      if (pubDateMs && pubDateMs < cutoff) continue;
+        // Date cutoff
+        const pubDateMs = Date.parse(dateStr);
+        if (pubDateMs && pubDateMs < cutoff) continue;
 
-      // Dedup against seen URLs and company+role
-      if (state.seenUrls.has(url.toLowerCase())) continue;
-      if (state.seenCompanyRoles.has(`${company.toLowerCase()}|${title.toLowerCase()}`)) continue;
+        // Dedup against seen URLs and company+role
+        if (state.seenUrls.has(url.toLowerCase())) continue;
+        if (state.seenCompanyRoles.has(`${company.toLowerCase()}|${title.toLowerCase()}`)) continue;
 
       // Fetch detail for full description and closed state check
       let description = '';
@@ -817,6 +820,7 @@ async function fetchLinkedIn(query, days, limit, state) {
   } catch (err) {
     console.error(`[linkedin] Error: ${err.message}`);
   }
+}
 
   return results;
 }
@@ -835,7 +839,17 @@ async function main() {
   const shouldFetchTorre = flags.portal === 'all' || flags.portal === 'torre';
   const shouldFetchLinkedIn = flags.portal === 'all' || flags.portal === 'linkedin';
 
-  const queries = flags.query ? [flags.query] : ['salesforce developer', 'frontend react', 'next.js', 'full stack'];
+  const queries = flags.query ? [flags.query] : [
+    'salesforce developer',
+    'desarrollador salesforce',
+    'frontend react',
+    'desarrollador react',
+    'next.js',
+    'desarrollador frontend',
+    'nestjs',
+    'node.js',
+    'full stack developer'
+  ];
 
   for (const q of queries) {
     if (shouldFetchGetOnBrd) {
