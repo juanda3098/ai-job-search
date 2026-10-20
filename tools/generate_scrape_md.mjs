@@ -121,13 +121,13 @@ export function evaluateFit(title, description, location, company = '') {
   }
 
   // B. React / Next.js primary roles
-  if (/\b(react|react\.js|next\.js)\b/i.test(lowerTitle) && !titleHasAntiStack) {
+  if (/\b(react(\.js|js)?|next\.js)\b/i.test(lowerTitle) && !titleHasAntiStack) {
     return 'high';
   }
 
   // C. Full-Stack / Software Engineer with explicit React / Next.js and TypeScript / Node / NestJS
-  if (/\b(full.?stack|desarrollador|software engineer|ingeniero de software|frontend|front-end)\b/i.test(lowerTitle) &&
-      /\b(react|next\.js)\b/i.test(text) && /\b(typescript|node|nest\.?js)\b/i.test(text) && !titleHasAntiStack) {
+  if (/\b(full.?stack|desarrollador|software engineer|ingeniero de software|frontend|front-end|product engineer)\b/i.test(lowerTitle) &&
+      /\b(react(\.js|js)?|next\.js)\b/i.test(text) && /\b(typescript|node|nest\.?js)\b/i.test(text) && !titleHasAntiStack) {
     return 'high';
   }
 
