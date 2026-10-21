@@ -281,7 +281,7 @@ export function generateScrapeMarkdown(options = {}) {
     try {
       const seenData = JSON.parse(fs.readFileSync(seenPath, 'utf8')).seen || {};
       for (const [k, v] of Object.entries(seenData)) {
-        if (v.status === 'applied') {
+        if (v.status === 'applied' || v.status === 'skipped' || v.status === 'rejected') {
           if (v.url) appliedTrackerUrls.add(v.url.toLowerCase());
           if (v.company && v.title) {
             appliedTrackerKeys.add(`${v.company.toLowerCase()}|${v.title.toLowerCase()}`);
